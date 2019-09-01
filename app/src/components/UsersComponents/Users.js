@@ -11,20 +11,17 @@ const Users = ({ api }) => {
       authorization: localStorage.getItem('token')
     };
 
-    console.log(headers.Authorization);
-
     axios
       .get(`${api}/users`, {
         headers
       })
       .then(res => {
-        console.log('res-data', res.data);
         setUsers(res.data.users);
       })
       .catch(err => {
         console.log(err.response.data);
       });
-  }, []);
+  }, [api]);
 
   return (
     <Container>

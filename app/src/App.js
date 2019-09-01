@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React from 'react';
 import Nav from './components/GlobalComponents/Nav';
 import Container from './components/DesignComponents/AppStyles';
 import Routes from './Routes';
